@@ -4,6 +4,10 @@ const cors = require('cors');
 
 const dns = require('dns');
 
+app.get('/', (req, res) => {
+  res.send('App is running securely 🎉');
+});
+
 app.use(cors({ origin: "https://labdeploy-webappmj.azurewebsites.net" }));
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;

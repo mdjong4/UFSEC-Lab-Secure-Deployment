@@ -25,5 +25,5 @@ jobs:
           -n labdeploy-webapp \
           --container-image-name labdeployacr.azurecr.io/myapp:latest \
           --container-registry-url https://labdeployacr.azurecr.io \
-          --container-registry-user <USERNAME> \
-          --container-registry-password <PASSWORD>
+          --container-registry-user ${{secrets.ACR_USER}} \
+          --container-registry-password ${{secrets.ACR_PWD}}

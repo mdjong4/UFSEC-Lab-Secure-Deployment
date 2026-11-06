@@ -15,7 +15,7 @@ const { SecretClient } = require("@azure/keyvault-secrets");
  
 const credential = new DefaultAzureCredential();
 const vaultName = process.env.KEYVAULT_NAME;
-const url = 'https://labdeploy-kv.vault.azure.net/';
+const url = `https://${vaultName}.vault.azure.net`;
 const client = new SecretClient(url, credential);
  
 async function getAdminPassword() {
